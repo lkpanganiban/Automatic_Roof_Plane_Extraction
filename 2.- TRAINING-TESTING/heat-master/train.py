@@ -167,8 +167,8 @@ def main():
     args = parser.parse_args()
     image_size = args.image_size
     if args.exp_dataset == 'outdoor':
-        data_path = './data/outdoor/cities_dataset'
-        det_path = './data/outdoor/det_final'
+        data_path = './data/outdoorEnschede2m256/cities_dataset'
+        det_path = './data/outdoorEnschede2m256/det_final'
         train_dataset = OutdoorBuildingDataset(data_path, det_path, phase='train', image_size=image_size, rand_aug=True,
                                                inference=False)
         test_dataset = OutdoorBuildingDataset(data_path, det_path, phase='valid', image_size=image_size, rand_aug=False,

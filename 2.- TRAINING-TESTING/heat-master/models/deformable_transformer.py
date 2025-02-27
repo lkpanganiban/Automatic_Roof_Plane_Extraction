@@ -1,6 +1,6 @@
 import copy
 import torch
-from torch import nn, Tensor
+from torch import nn
 from models.ops.modules import MSDeformAttn
 import torch.nn.functional as F
 

@@ -21,7 +21,7 @@ for filename in filenames:
 	annot_path = os.path.join(annot_base, filename + '.npy')
 
 	annot = np.load(annot_path, allow_pickle=True, encoding='latin1').tolist()
-	corners = np.array(list(annot.keys())).astype(np.int)
+	corners = np.array(list(annot.keys())).astype(np.int32)
 	
 	edges = set()
 	for c, others in annot.items():
@@ -31,7 +31,7 @@ for filename in filenames:
 			if edge not in edges and edge_2 not in edges:
 				edges.add(edge)
 
-	edges = np.array(list(edges)).astype(np.int)
+	edges = np.array(list(edges)).astype(np.int32)
 
 	# image = plot_preds(image, corners, edges)
 	# out_path = os.path.join(out_base, filename + '.png')

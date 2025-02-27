@@ -34,7 +34,7 @@ for result_filename in sorted(os.listdir(results_base)):
 
     results_path = os.path.join(results_base, result_filename)
     results = np.load(results_path, allow_pickle=True).tolist()
-    corners = results['corners'].astype(np.int)
+    corners = results['corners'].astype(np.int32)
     edge_ids = results['edges']
     edges = corners[edge_ids].reshape(edge_ids.shape[0], -1)
 

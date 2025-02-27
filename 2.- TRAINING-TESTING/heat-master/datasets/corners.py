@@ -54,7 +54,7 @@ class CornersDataset(Dataset):
     def get_corner_labels(self, corners):
         labels = np.zeros((self.image_size, self.image_size))
         corners = corners.round()
-        xint, yint = corners[:, 0].astype(np.int), corners[:, 1].astype(np.int)
+        xint, yint = corners[:, 0].astype(np.int32), corners[:, 1].astype(np.int32)
         labels[yint, xint] = 1
 
         gauss_labels = gaussian_filter(labels, sigma=2)

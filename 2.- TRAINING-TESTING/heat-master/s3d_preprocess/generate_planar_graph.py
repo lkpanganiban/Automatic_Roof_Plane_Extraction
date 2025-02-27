@@ -76,7 +76,7 @@ def generate_graph(annot, image_path, out_path):
     # room_idx = 0
     # for room_edges in cleaned_room_edges:
     #     for line_idx, edge in enumerate(room_edges):
-    #         c1, c2 = np.array(edge).astype(np.int)
+    #         c1, c2 = np.array(edge).astype(np.int32)
     #         cv2.line(viz_image, tuple(c1), tuple(c2), (255, 255, 0), 2)
     #         cv2.circle(viz_image, tuple(c1), 3, (0, 0, 255), -1)
     #         cv2.circle(viz_image, tuple(c2), 3, (0, 0, 255), -1)

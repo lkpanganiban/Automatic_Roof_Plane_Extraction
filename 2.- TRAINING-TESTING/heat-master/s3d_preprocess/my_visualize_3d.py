@@ -95,7 +95,7 @@ def triangulate(points):
     """
 
     num_points = len(points)
-    indices = np.arange(num_points, dtype=np.int)
+    indices = np.arange(num_points, dtype=np.int32)
     segments = np.vstack((indices, np.roll(indices, -1))).T
 
     tri = pymesh.triangle()
